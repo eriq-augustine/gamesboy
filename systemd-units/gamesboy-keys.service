@@ -1,0 +1,9 @@
+[Unit]
+Description=Map the Gamesboy GPIO pins to keyboard events.
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/gamesboy-controller
+
+[Install]
+WantedBy=multi-user.target
