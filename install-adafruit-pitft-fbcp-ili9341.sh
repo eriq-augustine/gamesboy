@@ -96,7 +96,7 @@ function install_fbcp() {
     mkdir build
     cd build
     echo "Building rpi-fbcp..."
-    cmake -DADAFRUIT_ILI9341_PITFT=ON -DSPI_BUS_CLOCK_DIVISOR=30 ..
+    cmake -DADAFRUIT_ILI9341_PITFT=ON -DSPI_BUS_CLOCK_DIVISOR=30 -DDISPLAY_ROTATE_180_DEGREES=ON -DSTATISTICS=0 ..
     make -j
     echo "Installing rpi-fbcp..."
     install fbcp-ili9341 /usr/local/bin/fbcp
